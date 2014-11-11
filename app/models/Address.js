@@ -164,7 +164,6 @@ Address.prototype.update = function(next, opts) {
       if (err) return next(err);
 
       tDb.cacheConfirmations(txOut, function(err) {
-        tDb.fillScriptPubKey(txOut, function() {});
         console.log('[Address.js.161:txOut:]',txOut); //TODO:remove me again
         if (err) return next(err);
         
